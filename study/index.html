@@ -10,38 +10,41 @@
 
 <body>
     <h1>Hi It's Monzer & Ammar Website</h1>
-    <p id="ammar"> bla bla bla <p>
-            <span id="counter"></span>
-            <form>
-                <!-- <input type="text"> -->
-                <!-- ooh hi lets chat here
+    <p id="ammar"> bla bla bla
+    <p>
+        <span id="counter"></span>
+    <form>
+        <!-- <input type="text"> -->
+        <!-- ooh hi lets chat here
                     -->
-            </form>
+    </form>
 
-            <script>
-                // get ammar element
-                var ammar = document.getElementById("ammar"),
-                    // get the timer screen
-                    count = document.getElementById("counter"),
-                    // set the counter start with 0
-                    counter = 0;
+    <script>
+        // get ammar element
+        var ammar = document.getElementById("ammar"),
+            // get the timer screen
+            count = document.getElementById("counter"),
+            // set the counter start with 0
+            counter = 0;
+        // let the counter change it's state every 1 second
+        var timer = setInterval(function () {
+            // add to counter
+            counter += 1
+            
+            // update the counter screen
+            count.innerHTML = `counter is currently: ${counter}`;
 
-                    // set a timer to change ammar element after 10 seconds
-                setTimeout(function () {
-                    // change ammar element to hola
-                    ammar.innerHTML = "Hola";
-                }, 10000);
+        }, 1000);
 
-                // let the counter change it's state every 1 second
-                setInterval(function () {
-                    // add to counter
-                    counter =+ 1
-                    console.log(counter);
-                    // update the counter screen
-                    count.innerHTML = `counter is currently: ${counter}`;
+        // set a timer to change ammar element after 10 seconds
+        setTimeout(function () {
+            // change ammar element to hola
+            ammar.innerHTML = "Hola";
+            
+        }, 10000);
 
-                }, 1000);
-            </script>
+
+    </script>
 </body>
 
 </html>
