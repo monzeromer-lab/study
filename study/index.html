@@ -30,7 +30,7 @@
         var timer = setInterval(function () {
             // add to counter
             counter += 1
-            
+
             // update the counter screen
             count.innerHTML = `counter is currently: ${counter}`;
 
@@ -40,6 +40,9 @@
         setTimeout(function () {
             // change ammar element to hola
             ammar.innerHTML = "Hola";
+            
+            // stop the counter
+            clearInterval(timer);
             
         }, 10000);
 
