@@ -40,4 +40,22 @@ function changeHola() {
 if (counter == 10) {
     ammar.innerHTML = "Hi Thanks for visiting this weirdo site :-)"
 }
-}
+};
+
+function sayHi(){
+    alert("Hi");
+};
+
+function showConfirm(){
+    var status = confirm("I'll just print yes if you clicked ok and no if cancel");
+    if(status){
+        alert("Yes");
+    } else {
+        alert("No");
+    }
+};
+
+function showPopup(){
+    var name = prompt("What's Your Name?", "Monzer (default)");
+    alert(`Welcome ${name}`);
+};
