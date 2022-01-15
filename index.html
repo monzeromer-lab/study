@@ -8,16 +8,39 @@
     <title>Study</title>
 </head>
 
-<body>
-    <h1>Hi It's Monzer & Ammar Website</h1>
-    <p id="ammar"> bla bla bla
+<body bgcolor="black">
+    <h1 style="color: white;">Hi It's Monzer & Ammar Website</h1>
+    <p id="ammar" style="color: white;"> bla bla bla
     <p>
-        <span id="counter"></span>
+        <span id="counter" style="color: white;"></span>
     <form>
         <!-- <input type="text"> -->
         <!-- ooh hi lets chat here
                     -->
+        <label for="click"> this will work only if the counter stoped</label>
+        <input type="button" value="Click me to change hola" id="click" onclick="changeHola()">
     </form>
+
+    <hr>
+    <p style="color: white;">ordenary list</p>
+    <ol style="color: white;">
+        <li>Hi I've no idea what I'm doing here</li>
+        <li>It's me again</li>
+    </ol>
+
+    <hr>
+    <p style="color: white;">unordenary list</p>
+    <ul style="color: white;">
+        <li>Hi I've no idea what I'm doing here</li>
+        <li>It's me again</li>
+    </ul>
+
+    <hr>
+    <p>images</p>
+    <img src="https://scontent.fkrt3-1.fna.fbcdn.net/v/t39.30808-6/271884031_4999734090078846_8510890832635143533_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeEPVYqk5qK7kFnpYNUSkEGmpVrIC8r_JnOlWsgLyv8mc1CmJGQPFTxBAiyuIjZJcd8jxr9poyr0cB0aXZQt1-vX&_nc_ohc=8bwdpcsX-xYAX-UBHVd&_nc_zt=23&_nc_ht=scontent.fkrt3-1.fna&oh=00_AT-CZgjjlLYBr2ovC5Fcjx4n4WQ3hyk60nP2Ua2fH0PtzQ&oe=61E8344F"
+        alt="Hi This is monzer testing add an image">
+    <img src="" alt="this is an image but actully without adding any image">
+
 
     <script>
         // get ammar element
@@ -30,7 +53,7 @@
         var timer = setInterval(function () {
             // add to counter
             counter += 1
-            
+
             // update the counter screen
             count.innerHTML = `counter is currently: ${counter}`;
 
@@ -40,10 +63,18 @@
         setTimeout(function () {
             // change ammar element to hola
             ammar.innerHTML = "Hola";
-            
+
             // stop the counter
             clearInterval(timer);
+
         }, 10000);
+
+        // this function will change hola to Hi Thanks for visiting this weirdo site :-)
+        function changeHola() {
+            if (counter == 10) {
+                ammar.innerHTML = "Hi Thanks for visiting this weirdo site :-)"
+            }
+        }
 
 
     </script>
